@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Samples</string>
+
+    <string name="foreground_service_started">Service is in the foreground</string>
+    <string name="alarm_service_label">Sample Alarm Service</string>
+</resources>

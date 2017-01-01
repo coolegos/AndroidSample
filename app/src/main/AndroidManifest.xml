@@ -1,0 +1,85 @@
+<manifest
+    package="com.egos.samples"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".SampleApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".activity_task.TaskSampleActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:host="test"
+                    android:scheme="test"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity_task.TaskSampleActivity2">
+        </activity>
+        <activity
+            android:name=".activity_task.TaskSampleActivity3">
+        </activity>
+        <activity
+            android:name=".activity_task.StartActivityResultSampleActivity">
+        </activity>
+        <!--<activity-->
+        <!--android:name=".activity_task.TaskSampleActivity2"-->
+        <!--android:allowTaskReparenting="true"-->
+        <!--android:taskAffinity="com.egos.samples.test"/>-->
+
+        <activity android:name=".clip.ClipChildrenTestActivity"></activity>
+        <activity android:name=".clip.ClipPaddingTestActivity"></activity>
+
+        <activity
+            android:name=".size_change.RelativeSizeChangeActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".size_change.LinearSizeChangeActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".size_change.FrameSizeChangeActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".contentprovider.ContentProviderSecondActivity">
+            <intent-filter>
+                <action android:name="egos.test.provider"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/egos.book"/>
+            </intent-filter>
+        </activity>
+
+        <service android:name=".service.DownloadService"/>
+        <service
+            android:name=".aidl.AddService"
+            android:process=":remote"/>
+
+        <service android:name=".service.ForegroundService"/>
+        <!--<provider-->
+        <!--android:name=".contentprovider.ContentProviderSample"-->
+        <!--android:authorities="com.egos.samples"/>-->
+
+        <provider
+            android:name=".contentprovider.ProviderFile"
+            android:authorities="com.egos.samples"
+            android:exported="true"/>
+    </application>
+
+</manifest>
