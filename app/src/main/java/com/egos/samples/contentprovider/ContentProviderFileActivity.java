@@ -13,6 +13,7 @@ import com.egos.samples.R;
 
 /**
  * Created by Egos on 2016/12/25.
+ * 将文件通过Content Provider来存储。对于一些图片使用Intent无法传递(Intent有传递的最大值)
  */
 public class ContentProviderFileActivity extends AppCompatActivity {
 

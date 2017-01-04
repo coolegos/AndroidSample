@@ -106,6 +106,7 @@ public class ProviderFile extends ContentProvider {
     @Override
     public ParcelFileDescriptor openFile(Uri uri, String mode) throws FileNotFoundException {
         if ("image/jpeg".equals(getType(uri))) {
+            // 通过这里将一个文件对应了一个Uri
             File file = new File(getContext().getExternalFilesDir(null), uri.getPath());
             if (file.exists()) {
                 return ParcelFileDescriptor.open(file, ParcelFileDescriptor.MODE_READ_ONLY);
