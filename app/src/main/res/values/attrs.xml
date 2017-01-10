@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="CustomLinearLayout">
+		<!-- 定义比例 -->
+		<!-- 这样写只能出现在CustomLinearLayout中 -->
+		<!--<attr name="inner_percent" format="float"/>-->
+	</declare-styleable>
+	<declare-styleable name="CustomLinearLayout_Layout">
+		<!-- 定义比例 -->
+		<attr name="inner_percent" format="float"/>
+	</declare-styleable>
+</resources>

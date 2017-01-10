@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<Button
+		android:id="@+id/button1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Landscape"
+		android:onClick="toLandscape"/>
+
+	<Button
+		android:id="@+id/button2"
+		android:layout_below="@id/button1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Portrait"
+		android:onClick="toPortrait"/>
+
+	<View
+		android:id="@+id/view"
+		android:layout_below="@id/button2"
+		android:background="#ffff0000"
+		android:layout_width="300dp"
+		android:layout_height="300dp"/>
+
+</RelativeLayout>

@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 import com.egos.samples.R;
 
 /**
@@ -39,5 +40,9 @@ public class ServiceTestActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void getPadding(View view) {
+        Toast.makeText(this, "paddingLeft = " + mProgressBar.getPaddingLeft(), Toast.LENGTH_SHORT).show();
     }
 }
