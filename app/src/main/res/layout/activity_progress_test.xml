@@ -15,6 +15,13 @@
 		android:layout_height="wrap_content"
 		android:background="@drawable/inset_drawable"/>
 
+	<ProgressBar
+		android:progressDrawable="@drawable/progressbar_ring"
+		android:layout_width="45dp"
+		android:progress="10"
+		android:max="100"
+		android:layout_height="45dp"/>
+
 	<ImageView
 		android:id="@+id/ring_image"
 		android:layout_width="45dp"

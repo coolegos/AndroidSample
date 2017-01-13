@@ -1,5 +1,10 @@
 apply plugin: 'com.android.application'
 
+// key.properties 用来存储打包信息
+def Properties signConfig = new Properties()
+def signConfigFile = file('key.properties')
+signConfig.load(new FileInputStream(signConfigFile))  // 将key.properties load进来
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
@@ -11,16 +16,30 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    lintOptions {
+        abortOnError false
+    }
+
+    signingConfigs {
+        release {
+            keyAlias signConfig.get('KEYALIAS')
+            keyPassword signConfig.get('KEYPASS')
+            storePassword signConfig.get('STOREPASS')
+            storeFile file('egos.jks')
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-all:1.10.19'
     compile 'com.android.support:appcompat-v7:25.1.0'

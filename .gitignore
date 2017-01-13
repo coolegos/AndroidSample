@@ -6,3 +6,7 @@
 .DS_Store
 /build
 /captures
+
+app/key.properties
+
+app/egos.jks
