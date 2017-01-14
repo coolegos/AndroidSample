@@ -1,4 +1,4 @@
-package com.egos.samples.gridlayout;
+package com.egos.samples.custom_layout;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,7 +9,7 @@ import com.egos.samples.R;
 /**
  * Created by Egos on 2017/1/5.
  */
-public class GridLayoutTestActivity extends AppCompatActivity {
+public class CustomLayoutTestActivity extends AppCompatActivity {
 
     /**
      * <Button android:id="@+id/four" android:text="4"/>

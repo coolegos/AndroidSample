@@ -1,4 +1,4 @@
-package com.egos.samples.gridlayout;
+package com.egos.samples.custom_layout;
 
 import android.annotation.TargetApi;
 import android.content.Context;
