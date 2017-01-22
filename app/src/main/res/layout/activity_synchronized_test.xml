@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<ImageView
+		android:id="@+id/image_view"
+		android:src="@mipmap/ic_launcher"
+		android:visibility="gone"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+
+	<Button
+		android:id="@+id/add1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="ADD1"
+		android:onClick="add1"/>
+
+	<Button
+		android:id="@+id/add2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="ADD2"
+		android:layout_below="@id/add1"
+		android:onClick="add2"/>
+
+	<Button
+		android:id="@+id/move"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="MOVE"
+		android:layout_below="@id/add2"
+		android:onClick="move"/>
+
+	<ImageView
+		android:id="@+id/move_image"
+		android:src="@mipmap/ic_launcher"
+		android:layout_below="@id/move"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+
+	<TextView
+		android:id="@+id/num"
+		android:textColor="#ffff0000"
+		tools:text="123\n"
+		android:text="0"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentBottom="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+</RelativeLayout>

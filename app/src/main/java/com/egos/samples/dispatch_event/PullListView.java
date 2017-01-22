@@ -146,7 +146,7 @@ public class PullListView extends ListView {
 
         int headerHeight = mHeaderView.getHeight();
         if (headerHeight > 0) {
-            Log.e("fanzhang resetHeader", "headerHeight = " + headerHeight);
+            Log.e("egos resetHeader", "headerHeight = " + headerHeight);
             mScroller.startScroll(0, headerHeight, 0, 0 - headerHeight, SCROLL_DURATION);
             invalidate();
         }
@@ -155,18 +155,18 @@ public class PullListView extends ListView {
     @Override
     public void scrollBy(int x, int y) {
         super.scrollBy(x, y);
-        Log.e("fanzhang scrollBy", "x = " + x + " y = " + y);
+        Log.e("egos scrollBy", "x = " + x + " y = " + y);
     }
 
     @Override
     public void setSelection(int position) {
         super.setSelection(position);
-//        Log.e("fanzhang setSelection", "position = " + position);
+//        Log.e("egos setSelection", "position = " + position);
     }
 
     @Override
     public void scrollTo(int x, int y) {
         super.scrollTo(x, y);
-        Log.e("fanzhang scrollTo", "x = " + x + " y = " + y);
+        Log.e("egos scrollTo", "x = " + x + " y = " + y);
     }
 }
